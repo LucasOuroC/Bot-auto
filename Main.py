@@ -82,7 +82,7 @@ def vote(personal_data_list, interval):
                 
                 print(f"Voto realizado com sucesso para {personal_data['pessoa']}!")
                 pyautogui.click(x=694, y=73)
-                pyautogui.write('https://www.revenda.com.br/pesquisas/pead/1/identifique-se')
+                pyautogui.write('Pagina de interesse')
                 time.sleep(1)
                 pyautogui.press('enter')
                 time.sleep(3)
