@@ -11,7 +11,7 @@ def vote(personal_data_list, interval):
     time.sleep(1)
     
     #Abrindo pagina de votação    
-    pyautogui.write('Pagina de interesse')#Substituir de acordo com a pagia de interesse
+    pyautogui.write('https://www.revenda.com.br/pesquisas/pead/1/identifique-se')#Substituir de acordo com a pagia de interesse
     time.sleep(1)
     pyautogui.press('enter')
     time.sleep(3)
@@ -61,28 +61,33 @@ def vote(personal_data_list, interval):
                 
                 #Primeiro voto(esquema diferente da pagina)
                 pyautogui.click(x=341, y=394)
-                pyautogui.write('Teste')
+                pyautogui.hotkey('ctrl', 'a')
+                pyautogui.write('Mercante Distribuidora')
                 time.sleep(1)
                 pyautogui.click(x=304, y=484)
                 time.sleep(1)
                 
                 #Votação direta 4x
-                for i in range(3):
+                for i in range(4):
                     time.sleep(2)
                     pyautogui.click(x=341, y=394)
-                    pyautogui.write('Nome do candidato')
+                    time.sleep(1)
+                    pyautogui.hotkey('ctrl', 'a')
+                    time.sleep(1)
+                    pyautogui.write('Mercante Distribuidora')
                     time.sleep(1)
                     pyautogui.click(x=445, y=481)
 
                 #Finalizando voto
                 print("Esperando a página de votação carregar")
+                #time.sleep(30)
                 time.sleep(5) 
                 pyautogui.click(x=810, y=581) 
                 time.sleep(5)
                 
                 print(f"Voto realizado com sucesso para {personal_data['pessoa']}!")
                 pyautogui.click(x=694, y=73)
-                pyautogui.write('Pagina de interesse')
+                pyautogui.write('https://www.revenda.com.br/pesquisas/pead/1/identifique-se')
                 time.sleep(1)
                 pyautogui.press('enter')
                 time.sleep(3)
